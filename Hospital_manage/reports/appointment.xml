@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+   <template id="appointment_report">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <h2>Patient Card </h2>
+                <br/>
+                <br/>
+                <h><t t-esc="doc.patient_name"/>
+
+                </h>
+                <img alt="Barcode" t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('EAN13', doc.patient_name, 600, 150)" style="width:100%;height::4rem;"/>
+
+                <h2>Test</h2>
+            </t>
+        </t>
+
+
+
+   </template>
+
+</odoo>
+
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<odoo>-->
+
+<!--    <template id="appointment_report">-->
+<!--        <t t-call="web.html_container">-->
+<!--            <t t-call="web.external_layout">-->
+<!--                <div class="page">-->
+<!--                    <div class="oe_structure"/>-->
+<!--&lt;!&ndash;                    <div class="row">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <span>Patient: <t t-esc="data['patient_id'][1]"/></span>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+<!--                     <t t-call="web.html_container">-->
+<!--                        <t t-foreach="docs" t-as="doc">-->
+<!--                            <h2>Patient Card </h2>-->
+<!--                            <br/>-->
+<!--                            <br/>-->
+<!--                            <h><t t-esc="doc.patient_name"/>-->
+
+<!--                            </h>-->
+<!--                            <img alt="Barcode" t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('EAN13', doc.patient_name, 600, 150)" style="width:100%;height::4rem;"/>-->
+
+<!--                            <h2>Test</h2>-->
+<!--                        </t>-->
+<!--        </t>-->
+
+
+<!--                    <div class="row">-->
+<!--                        <table class="table table-condensed">-->
+<!--                            <thead>-->
+<!--                                <tr>-->
+<!--                                    <th style="text-align:left;"><strong>Name </strong></th>-->
+<!--                                    <th style="text-align:left;"><strong>Date </strong></th>-->
+<!--                                    <th style="text-align:left;"><strong>Status </strong></th>-->
+<!--                                    <th style="text-align:left;"><strong>Notes </strong></th>-->
+<!--                                </tr>-->
+<!--                            </thead>-->
+<!--                            <tbody>-->
+<!--                                <t t-foreach="appointments" t-as="o">-->
+<!--                                    <tr>-->
+<!--                                        <td style="text-align:left;">-->
+<!--                                            <t t-esc="o['name']"/>-->
+<!--                                        </td>-->
+<!--                                        <td style="text-align:left;">-->
+<!--                                            <t t-esc="o['appointment_date']"/>-->
+<!--                                        </td>-->
+<!--                                         <td style="text-align:left;">-->
+<!--                                             <span t-field="o.state"/>-->
+<!--                                        </td>-->
+<!--                                        <td style="text-align:left;">-->
+<!--                                            <t t-esc="o['notes']"/>-->
+<!--                                        </td>-->
+<!--                                    </tr>-->
+<!--                                </t>-->
+<!--                            </tbody>-->
+<!--                        </table>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </t>-->
+<!--        </t>-->
+<!--    </template>-->
+
+<!--</odoo>-->
+
+

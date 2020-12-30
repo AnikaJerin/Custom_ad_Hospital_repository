@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <report
+        id="report_patient_card"
+        string="Patient Card"
+        model="hospital.patient"
+        report_type="qweb-pdf"
+        name="Hospital_manage.report_patient"
+        file="Hospital_manage.report_patient"/>
+    <report
+        id="report_patient_card_xlx"
+        string="Patient Card Excel"
+        model="hospital.patient"
+        report_type="xlsx"
+        name="Hospital_manage.report_patient_xls"
+        file="Hospital_manage.patient_card_xls"/>
+    <report
+        id="report_appointment"
+        string="Appointment"
+        model="hospital.patient"
+        report_type="qweb-pdf"
+        name="Hospital_manage.appointment_report"
+        file="Hospital_manage.appointment"/>
+<!--    <record id="record_id" model="ir.actions.report">-->
+<!--        <field name="name">test</field>-->
+<!--        <field name="model">hospital.patient</field>-->
+<!--        <field name="report_type">qweb-pdf</field>-->
+<!--        <field name="report_name">Hospital_manage.appointment_report</field>-->
+<!--&lt;!&ndash;        <field name="file">Hospital_manage.appointment_report</field>&ndash;&gt;-->
+<!--    </record>-->
+
+</odoo>
